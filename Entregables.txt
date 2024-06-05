@@ -1,0 +1,9 @@
+Entregables:
++ Reporte hecho en markwodn con:
+  * Introducción
+  * Actividades realizadas
+  * Lecciones aprendidas.
+Incluir referencias en caso de tenerlas (IEEE, ACM).
++ El proyecto PDI
++ Reporte hecho en markdown
++ Carpeta llamada "Output" con el csv final (ArchivoSalida.csv).
