@@ -594,16 +594,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>amesdbtemp</from>
-      <to>Calculator</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Calculator</from>
-      <to>Sort MS SubClass</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>floordetail</from>
       <to>Sort pid 3</to>
       <enabled>Y</enabled>
@@ -636,6 +626,11 @@
     <hop>
       <from>Merge join 4</from>
       <to>ArchivoSalida</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>amesdbtemp</from>
+      <to>Sort MS SubClass</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -884,7 +879,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>112</xloc>
       <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
@@ -918,7 +913,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>448</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -952,7 +947,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>640</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -986,7 +981,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>848</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1028,7 +1023,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>336</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1070,7 +1065,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>336</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1112,7 +1107,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>448</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1154,7 +1149,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>528</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1196,7 +1191,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>528</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1238,7 +1233,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
+      <xloc>736</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1255,7 +1250,11 @@
       <schema_name/>
     </partitioning>
     <connection>postgressql_db</connection>
-    <sql>SELECT * FROM amesdbtemp</sql>
+    <sql>SELECT 
+a.*
+, a."1st Flr SF" + a."2nd Flr SF" + a."Low Qual Fin SF" AS "Gr Liv Area"
+FROM amesdbtemp AS a
+ORDER BY a."MS SubClass"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1269,7 +1268,7 @@
         <name>Exter Cond</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Exter Cond</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1292,7 +1291,7 @@
         <name>Exter Qual</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Exter Qual</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1315,7 +1314,7 @@
         <name>Heating QC</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Heating QC</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1338,7 +1337,7 @@
         <name>Kitchen Qual</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Kitchen Qual</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1361,7 +1360,7 @@
         <name>MS Zoning</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>MS Zoning</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1384,7 +1383,7 @@
         <name>pid</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>pid</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1407,7 +1406,7 @@
         <name>Roof Style</name>
         <length>7</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Roof Style</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1430,7 +1429,7 @@
         <name>Roof Matl</name>
         <length>7</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Roof Matl</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1453,7 +1452,7 @@
         <name>Exterior 1st</name>
         <length>7</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Exterior 1st</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1476,7 +1475,7 @@
         <name>Exterior 2nd</name>
         <length>7</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Exterior 2nd</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1499,7 +1498,7 @@
         <name>Mas Vnr Type</name>
         <length>7</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Mas Vnr Type</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1522,7 +1521,7 @@
         <name>Mas Vnr Area</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Mas Vnr Area</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1545,7 +1544,7 @@
         <name>foundation</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>foundation</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1568,7 +1567,7 @@
         <name>heating</name>
         <length>5</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>heating</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1591,7 +1590,7 @@
         <name>Central Air</name>
         <length>-1</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Central Air</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1614,7 +1613,7 @@
         <name>electrical</name>
         <length>5</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>electrical</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1637,7 +1636,7 @@
         <name>1st Flr SF</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>1st Flr SF</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1660,7 +1659,7 @@
         <name>2nd Flr SF</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>2nd Flr SF</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1683,7 +1682,7 @@
         <name>Low Qual Fin SF</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Low Qual Fin SF</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1706,7 +1705,7 @@
         <name>Kitchen AbvGr</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Kitchen AbvGr</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1729,7 +1728,7 @@
         <name>TotRms AbvGrd</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>TotRms AbvGrd</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1752,7 +1751,7 @@
         <name>functional</name>
         <length>4</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>functional</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1775,7 +1774,7 @@
         <name>fireplaces</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>fireplaces</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1798,7 +1797,7 @@
         <name>Fireplace Qu</name>
         <length>2</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Fireplace Qu</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1821,7 +1820,7 @@
         <name>Paved Drive</name>
         <length>1</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Paved Drive</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1844,7 +1843,7 @@
         <name>Wood Deck SF</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Wood Deck SF</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1867,7 +1866,7 @@
         <name>Open Porch SF</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Open Porch SF</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1890,7 +1889,7 @@
         <name>Enclosed Porch</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Enclosed Porch</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1913,7 +1912,7 @@
         <name>3Ssn Porch</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>3Ssn Porch</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1936,7 +1935,7 @@
         <name>Screen Porch</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>Screen Porch</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
@@ -1959,7 +1958,7 @@
         <name>fence</name>
         <length>5</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>fence</comments>
         <conversion_Mask/>
         <decimal_symbol>,</decimal_symbol>
@@ -1982,8 +1981,31 @@
         <name>MS SubClass</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>amesdbtemp</origin>
         <comments>MS SubClass</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_CO</date_format_locale>
+        <date_format_timezone>America/Bogota</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>Gr Liv Area</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>amesdbtemp</origin>
+        <comments>Gr Liv Area</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>,</decimal_symbol>
         <grouping_symbol>.</grouping_symbol>
@@ -2009,7 +2031,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>112</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2159,7 +2181,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>112</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2240,7 +2262,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
+      <xloc>64</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2344,7 +2366,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>112</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2494,7 +2516,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
+      <xloc>64</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2598,7 +2620,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
+      <xloc>64</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2963,47 +2985,6 @@
     </GUI>
   </step>
   <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <field_name>Gr Liv Area</field_name>
-      <calc_type>ADD</calc_type>
-      <field_a>1st Flr SF</field_a>
-      <field_b>2nd Flr SF</field_b>
-      <field_c>Low Qual Fin SF</field_c>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>176</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Group by</name>
     <type>GroupBy</type>
     <description/>
@@ -3056,7 +3037,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>576</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3098,7 +3079,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>336</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3140,7 +3121,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>800</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3174,7 +3155,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>1056</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3216,7 +3197,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>944</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3273,7 +3254,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1136</xloc>
+      <xloc>1184</xloc>
       <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
