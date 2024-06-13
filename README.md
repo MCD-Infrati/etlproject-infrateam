@@ -1,4 +1,4 @@
-# Project Name
+# ETL (Extract, Transform, Load) Proyect
 This project is a part of the  **Infraestructura y arquitectura de TI** course in the Applied Artificial Intelligence Master, Universidad Icesi, Cali Colombia. 
 
 #### -- Project Status: [Completed]
