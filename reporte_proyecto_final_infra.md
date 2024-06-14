@@ -60,7 +60,7 @@ Un reporte de la experimentación que incluya:
 
 **7. Nodo Merge join - Agregar nodo tipo "Merge join"**
 
->> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid y floordetail.
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid y floordetail.  Utilizamos LEFT OUTER JOIN para conservar todos los datos de la tabla resultado del paso Sort pid y adicionando los registros de la tabla floordetail cuyo pid coincida con los registros contenidos en el paso Sort pid.
 
 ![No se pudo cargar la imagen 5-merge_join.png](images/5-merge_join.png)
 <br><br><br>
@@ -98,11 +98,20 @@ Un reporte de la experimentación que incluya:
 <br><br><br>
 
 
+
+**. Nodo Value mapper - Agregar nodo tipo "Value mapper"**
+
+>> Agregar nodo tipo Value mapper enlazándolo al nodo anterior, Nvl, para realizar la operación de reemplazar los valores del campo Condition 1 a nombres mas extensos para hacerlos mas descriptivos.
+
+![No se pudo cargar la 7b-value_mapper.png](images/8b-value_mapper.png)
+<br><br><br>
+
+
 **. Nodo Select values 3 - Agregar nodo tipo "Select values"**
 
->> Se agrega un nodo tipo Select values conectándolo con el nodo anterior, Nvl, para especificar qué columnas se requieren que sigan en el flujo de datos en la siguiente etapa de transformación.
+>> Se agrega un nodo tipo Select values conectándolo con el nodo anterior, Value mapper, para especificar qué columnas se requieren que sigan en el flujo de datos en la siguiente etapa de transformación.
 
-![No se pudo cargar la imagen 9-select_values3.png](images/9-select_values3.png)
+![No se pudo cargar la imagen 9-select_values3.png](images/9a-select_values3.png)
 <br><br><br>
 
 
@@ -116,7 +125,7 @@ Un reporte de la experimentación que incluya:
 
 **. Nodo Merge join 2 - Agregar nodo tipo "Merge join"**
 
->> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid 2 y Sort pid 3.
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid 2 y Sort pid 3.  Utilizamos INNER JOIN para conservar los datos que coincidan en las dos tablas obtenidas del paso Sort pid 2 y Sort pid 3.
 
 ![No se pudo cargar la imagen 11-merge_join2.png](images/11-merge_join2.png)
 <br><br><br>
@@ -140,7 +149,7 @@ Un reporte de la experimentación que incluya:
 
 **. Nodo garage - Agregar nodo tipo "MongoDB input"**
 
->> Agregar un nodo tipo MongoDB input para importar los datos de la colección garage desde mongodb.
+>> Agregar un nodo tipo MongoDB input para importar los datos de la colección garage desde mongodb.  Aquí obtenemos como resultado todos los datos de la tabla a la izquierda y los de la colección garage cuyo pid coincida con los registros de la tabla que ya traemos.
 
 ![No se pudo cargar la imagen 14-garage.png](images/14-garage.png)
 <br><br><br>
@@ -156,7 +165,7 @@ Un reporte de la experimentación que incluya:
 
 **. Nodo Merge join 3 - Agregar nodo tipo "Merge join"**
 
->> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid 4 y Sort pid 5.
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort pid 4 y Sort pid 5.  Utilizamos LEFT OUTER JOIN para conservar todos los datos de la tabla resultado del paso Sort pid 4 y adicionando los registros de la tabla obtenida en el paso Sort pid 5 cuyo pid coincida con los registros contenidos en el paso Sort pid 4.
 
 ![No se pudo cargar la imagen 16-merge_join3.png](images/16-merge_join3.png)
 <br><br><br>
@@ -176,4 +185,141 @@ Un reporte de la experimentación que incluya:
 >> Agregar un nodo tipo Sort uniéndolo al nodo anterior, Select values 6, para ordenar el resultado del contenido del nodo Merge join 3 en orden ascendente por el campo pid.
 
 ![No se pudo cargar la imagen 18-sort_rows2.png](images/18-sort_rows2.png)
+<br><br><br>
+
+
+**. Nodo pool - Agregar nodo tipo "MongoDB input"**
+
+>> Agregar un nodo tipo MongoDB input para importar los datos de la colección pool desde mongodb.
+
+![No se pudo cargar la imagen 19-pool.png](images/19-pool.png)
+<br><br><br>
+
+
+**. Nodo Sort rows - Agregar nodo tipo "Sort"**
+
+>> Agregar un nodo tipo Sort uniéndolo al nodo anterior, pool, para ordenar el resultado del contenido de la colección pool en orden ascendente por el campo PID.
+
+![No se pudo cargar la imagen 20-sort_rows.png](images/20-sort_rows.png)
+<br><br><br>
+
+
+**. Nodo Merge join 4 - Agregar nodo tipo "Merge join"**
+
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort rows 2 y Sort rows.  Aquí obtenemos como resultado todos los datos de la tabla obtenida en Sort rows 2 y los de la colección pool cuyo PID coincida con los registros de la tabla que ya traemos.
+
+![No se pudo cargar la imagen 21-merge_join4.png](images/21-merge_join4.png)
+<br><br><br>
+
+
+
+**. Nodo Select values 4 - Agregar nodo tipo "Select values"**
+
+>> Se agrega un nodo tipo Select values conectándolo con el nodo anterior, Merge join 4, para especificar qué columnas se requieren que sigan en el flujo de datos en la siguiente etapa de transformación.
+
+![No se pudo cargar la imagen 22-select_values4.png](images/22-select_values4.png)
+<br><br><br>
+
+
+
+**. Nodo Sort rows 4 - Agregar nodo tipo "Sort"**
+
+>> Agregar un nodo tipo Sort uniéndolo al nodo anterior, Select values 4, para ordenar el resultado del contenido del nodo Select values 4 en orden ascendente por el campo pid.
+
+![No se pudo cargar la imagen 20-sort_rows.png](images/20-sort_rows.png)
+<br><br><br>
+
+
+
+**. Nodo bsmt - Agregar nodo tipo "MongoDB input"**
+
+>> Agregar un nodo tipo MongoDB input para importar los datos de la colección bsmt desde mongodb.
+
+![No se pudo cargar la imagen 22-bsmt.png](images/22-bsmt.png)
+<br><br><br>
+
+
+
+
+**. Nodo Sort rows 5 - Agregar nodo tipo "Sort"**
+
+>> Agregar un nodo tipo Sort uniéndolo al nodo anterior, bsmt, para ordenar el resultado del contenido de la colección bsmt en orden ascendente por el campo PID.
+
+![No se pudo cargar la imagen 23-sort_rows5.png](images/23-sort_rows5.png)
+<br><br><br>
+
+
+**. Nodo Merge join 5 - Agregar nodo tipo "Merge join"**
+
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort rows 4 y Sort rows 5.  Aquí obtenemos como resultado todos los datos de la tabla obtenida en Sort rows 4 y los de la colección bsmt cuyo PID coincida con los registros de la tabla de Sort rows 4 que ya traíamos.
+
+![No se pudo cargar la imagen 24-merge_join5.png](images/24-merge_join5.png)
+<br><br><br>
+
+
+
+**. Nodo Select values 7 - Agregar nodo tipo "Select values"**
+
+>> Se agrega un nodo tipo Select values conectándolo con el nodo anterior, Merge join 5, para especificar qué columnas se requieren que sigan en el flujo de datos en la siguiente etapa de transformación.
+
+![No se pudo cargar la imagen 25-select_values7.png](images/25-select_values7.png)
+<br><br><br>
+
+
+
+
+**. Nodo Sort rows 6 - Agregar nodo tipo "Sort"**
+
+>> Agregar un nodo tipo Sort uniéndolo al nodo anterior, Select values 7, para ordenar el resultado del contenido del nodo Select values 7 en orden ascendente por el campo pid.
+
+![No se pudo cargar la imagen 26-sort_rows6.png](images/26-sort_rows6.png)
+<br><br><br>
+
+
+**. Nodo misc - Agregar nodo tipo "MongoDB input"**
+
+>> Agregar un nodo tipo MongoDB input para importar los datos de la colección **misc** desde mongodb.
+
+![No se pudo cargar la imagen 27-misc.png](images/27-misc.png)
+<br><br><br>
+
+
+**. Nodo Sort rows 3 - Agregar nodo tipo "Sort"**
+
+>> Agregar un nodo tipo Sort uniéndolo al nodo anterior, misc, para ordenar el resultado del contenido de la colección misc en orden ascendente por el campo PID.
+
+![No se pudo cargar la imagen 27-sort_rows3.png](images/27-sort_rows3.png)
+<br><br><br>
+
+
+**. Nodo Merge join 6 - Agregar nodo tipo "Merge join"**
+
+>> Agregar nodo tipo merge join para unir los datos del resultado del paso Sort rows 6 y Sort rows 3.  Aquí obtenemos como resultado todos los datos de la tabla obtenida en Sort rows 6 y los de la colección misc cuyo PID coincida con los registros de la tabla de Sort rows 6 que ya traíamos.
+
+![No se pudo cargar la imagen 28-merge_join6.png](images/28-merge_join6.png)
+<br><br><br>
+
+
+
+**. Nodo Select values 8 - Agregar nodo tipo "Select values"**
+
+>> Se agrega un nodo tipo Select values conectándolo con el nodo anterior, Merge join 6, para especificar qué columnas se requieren que sigan en el flujo de datos en la siguiente etapa de transformación.
+
+![No se pudo cargar la imagen 29-select_values8.png](images/29-select_values8.png)
+<br><br><br>
+
+
+**. Nodo if field value is null - Agregar nodo tipo "Utility"**
+
+>> Se agrega un nodo tipo Utility conectándolo con el nodo anterior, Select values 8, para configurar reemplazar valores nulos por 0 o por NA en todas las columnas de la tabla obtenida en el nodo Merge join 6.
+
+![No se pudo cargar la imagen 30-if_field_value_is_null.png](images/30-if_field_value_is_null.png)
+<br><br><br>
+
+
+**. Nodo ArchivoSalida - Agregar nodo tipo "Text file output"**
+
+>> Se agrega un nodo tipo Text file output conectándolo con el nodo anterior, if field value is null, para generar el archivo csv de salida que contendrá el resultado de las transformaciones, este nodo generará un archivo que se guarda en una ruta específica.
+
+![No se pudo cargar la imagen 31-archivo_salida.png](images/31-archivo_salida.png)
 <br><br><br>

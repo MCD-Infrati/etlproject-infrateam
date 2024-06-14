@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Transformation 2</name>
+    <name>PDI</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -430,7 +430,7 @@
     <created_date>2024/06/05 21:14:45.763</created_date>
     <modified_user>-</modified_user>
     <modified_date>2024/06/05 21:14:45.763</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -674,7 +674,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:/Users/Lenovo/Downloads/etlproject-infrateam/sources/AmesProperty.csv</filename>
+    <filename>C:\Users\kenny\proyecto_final_infraestructura\etlproject-infrateam\sources\AmesProperty.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -938,7 +938,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:/Users/Lenovo/Downloads/etlproject-infrateam/ArchivoSalida</name>
+      <name>C:\Users\kenny\proyecto_final_infraestructura\etlproject-infrateam\sources\ArchivoSalida</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>csv</extention>
@@ -2709,11 +2709,9 @@
     <fields>
       <field>
         <name>pid</name>
-        <rename/>
       </field>
       <field>
         <name>MS SubClass</name>
-        <rename/>
       </field>
       <field>
         <name>code_mszoning</name>
@@ -2721,27 +2719,21 @@
       </field>
       <field>
         <name>Roof Style</name>
-        <rename/>
       </field>
       <field>
         <name>Roof Matl</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 1st</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 2nd</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Type</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Area</name>
-        <rename/>
       </field>
       <field>
         <name>code_exter_qual</name>
@@ -2753,11 +2745,9 @@
       </field>
       <field>
         <name>foundation</name>
-        <rename/>
       </field>
       <field>
         <name>heating</name>
-        <rename/>
       </field>
       <field>
         <name>code_heating_qc</name>
@@ -2765,31 +2755,24 @@
       </field>
       <field>
         <name>Central Air</name>
-        <rename/>
       </field>
       <field>
         <name>electrical</name>
-        <rename/>
       </field>
       <field>
         <name>1st Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>2nd Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>Low Qual Fin SF</name>
-        <rename/>
       </field>
       <field>
         <name>Gr Liv Area</name>
-        <rename/>
       </field>
       <field>
         <name>Kitchen AbvGr</name>
-        <rename/>
       </field>
       <field>
         <name>code_kitchen_qual</name>
@@ -2797,67 +2780,51 @@
       </field>
       <field>
         <name>TotRms AbvGrd</name>
-        <rename/>
       </field>
       <field>
         <name>functional</name>
-        <rename/>
       </field>
       <field>
         <name>fireplaces</name>
-        <rename/>
       </field>
       <field>
         <name>Fireplace Qu</name>
-        <rename/>
       </field>
       <field>
         <name>Paved Drive</name>
-        <rename/>
       </field>
       <field>
         <name>Wood Deck SF</name>
-        <rename/>
       </field>
       <field>
         <name>Open Porch SF</name>
-        <rename/>
       </field>
       <field>
         <name>Enclosed Porch</name>
-        <rename/>
       </field>
       <field>
         <name>3Ssn Porch</name>
-        <rename/>
       </field>
       <field>
         <name>Screen Porch</name>
-        <rename/>
       </field>
       <field>
         <name>fence</name>
-        <rename/>
       </field>
       <field>
         <name>Mo Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Yr Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Type</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Condition</name>
-        <rename/>
       </field>
       <field>
         <name>saleprice</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2889,107 +2856,81 @@
     <fields>
       <field>
         <name>pid</name>
-        <rename/>
       </field>
       <field>
         <name>MS SubClass</name>
-        <rename/>
       </field>
       <field>
         <name>MS Zoning</name>
-        <rename/>
       </field>
       <field>
         <name>Roof Style</name>
-        <rename/>
       </field>
       <field>
         <name>Roof Matl</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 1st</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 2nd</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Type</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Area</name>
-        <rename/>
       </field>
       <field>
         <name>Exter Qual</name>
-        <rename/>
       </field>
       <field>
         <name>Exter Cond</name>
-        <rename/>
       </field>
       <field>
         <name>foundation</name>
-        <rename/>
       </field>
       <field>
         <name>heating</name>
-        <rename/>
       </field>
       <field>
         <name>Heating QC</name>
-        <rename/>
       </field>
       <field>
         <name>Central Air</name>
-        <rename/>
       </field>
       <field>
         <name>electrical</name>
-        <rename/>
       </field>
       <field>
         <name>1st Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>2nd Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>Low Qual Fin SF</name>
-        <rename/>
       </field>
       <field>
         <name>Gr Liv Area</name>
-        <rename/>
       </field>
       <field>
         <name>fullbath</name>
-        <rename/>
       </field>
       <field>
         <name>halfbath</name>
-        <rename/>
       </field>
       <field>
         <name>bedroom</name>
-        <rename/>
       </field>
       <field>
         <name>Kitchen AbvGr</name>
-        <rename/>
       </field>
       <field>
         <name>Kitchen Qual</name>
-        <rename/>
       </field>
       <field>
         <name>TotRms AbvGrd</name>
-        <rename/>
       </field>
       <field>
         <name>functional</name>
@@ -3001,55 +2942,42 @@
       </field>
       <field>
         <name>Fireplace Qu</name>
-        <rename/>
       </field>
       <field>
         <name>Paved Drive</name>
-        <rename/>
       </field>
       <field>
         <name>Wood Deck SF</name>
-        <rename/>
       </field>
       <field>
         <name>Open Porch SF</name>
-        <rename/>
       </field>
       <field>
         <name>Enclosed Porch</name>
-        <rename/>
       </field>
       <field>
         <name>3Ssn Porch</name>
-        <rename/>
       </field>
       <field>
         <name>Screen Porch</name>
-        <rename/>
       </field>
       <field>
         <name>fence</name>
-        <rename/>
       </field>
       <field>
         <name>Mo Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Yr Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Type</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Condition</name>
-        <rename/>
       </field>
       <field>
         <name>saleprice</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -4099,115 +4027,87 @@
       </field>
       <field>
         <name>MS SubClass</name>
-        <rename/>
       </field>
       <field>
         <name>MS Zoning</name>
-        <rename/>
       </field>
       <field>
         <name>Lot Frontage</name>
-        <rename/>
       </field>
       <field>
         <name>Lot Area</name>
-        <rename/>
       </field>
       <field>
         <name>Street</name>
-        <rename/>
       </field>
       <field>
         <name>Alley</name>
-        <rename/>
       </field>
       <field>
         <name>Lot Shape</name>
-        <rename/>
       </field>
       <field>
         <name>Land Contour</name>
-        <rename/>
       </field>
       <field>
         <name>Utilities</name>
-        <rename/>
       </field>
       <field>
         <name>Lot Config</name>
-        <rename/>
       </field>
       <field>
         <name>Land Slope</name>
-        <rename/>
       </field>
       <field>
         <name>Neighborhood</name>
-        <rename/>
       </field>
       <field>
         <name>Condition 1</name>
-        <rename/>
       </field>
       <field>
         <name>Condition 2</name>
-        <rename/>
       </field>
       <field>
         <name>Bldg Type</name>
-        <rename/>
       </field>
       <field>
         <name>House Style</name>
-        <rename/>
       </field>
       <field>
         <name>Overall Qual</name>
-        <rename/>
       </field>
       <field>
         <name>Overall Cond</name>
-        <rename/>
       </field>
       <field>
         <name>Year Built</name>
-        <rename/>
       </field>
       <field>
         <name>Year Remod/Add</name>
-        <rename/>
       </field>
       <field>
         <name>Roof Style</name>
-        <rename/>
       </field>
       <field>
         <name>Roof Matl</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 1st</name>
-        <rename/>
       </field>
       <field>
         <name>Exterior 2nd</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Type</name>
-        <rename/>
       </field>
       <field>
         <name>Mas Vnr Area</name>
-        <rename/>
       </field>
       <field>
         <name>Exter Qual</name>
-        <rename/>
       </field>
       <field>
         <name>Exter Cond</name>
-        <rename/>
       </field>
       <field>
         <name>foundation</name>
@@ -4215,39 +4115,30 @@
       </field>
       <field>
         <name>Bsmt Qual</name>
-        <rename/>
       </field>
       <field>
         <name>Bsmt Cond</name>
-        <rename/>
       </field>
       <field>
         <name>Bsmt Exposure</name>
-        <rename/>
       </field>
       <field>
         <name>BsmtFin Type 1</name>
-        <rename/>
       </field>
       <field>
         <name>BsmtFin SF 1</name>
-        <rename/>
       </field>
       <field>
         <name>BsmtFin Type 2</name>
-        <rename/>
       </field>
       <field>
         <name>BsmtFin SF 2</name>
-        <rename/>
       </field>
       <field>
         <name>Bsmt Unf SF</name>
-        <rename/>
       </field>
       <field>
         <name>Total Bsmt SF</name>
-        <rename/>
       </field>
       <field>
         <name>heating</name>
@@ -4255,11 +4146,9 @@
       </field>
       <field>
         <name>Heating QC</name>
-        <rename/>
       </field>
       <field>
         <name>Central Air</name>
-        <rename/>
       </field>
       <field>
         <name>electrical</name>
@@ -4267,27 +4156,21 @@
       </field>
       <field>
         <name>1st Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>2nd Flr SF</name>
-        <rename/>
       </field>
       <field>
         <name>Low Qual Fin SF</name>
-        <rename/>
       </field>
       <field>
         <name>Gr Liv Area</name>
-        <rename/>
       </field>
       <field>
         <name>Bsmt Full Bath</name>
-        <rename/>
       </field>
       <field>
         <name>Bsmt Half Bath</name>
-        <rename/>
       </field>
       <field>
         <name>fullbath</name>
@@ -4303,15 +4186,12 @@
       </field>
       <field>
         <name>Kitchen AbvGr</name>
-        <rename/>
       </field>
       <field>
         <name>Kitchen Qual</name>
-        <rename/>
       </field>
       <field>
         <name>TotRms AbvGrd</name>
-        <rename/>
       </field>
       <field>
         <name>functional</name>
@@ -4323,67 +4203,51 @@
       </field>
       <field>
         <name>Fireplace Qu</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Type</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Yr Blt</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Finish</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Cars</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Area</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Qual</name>
-        <rename/>
       </field>
       <field>
         <name>Garage Cond</name>
-        <rename/>
       </field>
       <field>
         <name>Paved Drive</name>
-        <rename/>
       </field>
       <field>
         <name>Wood Deck SF</name>
-        <rename/>
       </field>
       <field>
         <name>Open Porch SF</name>
-        <rename/>
       </field>
       <field>
         <name>Enclosed Porch</name>
-        <rename/>
       </field>
       <field>
         <name>3Ssn Porch</name>
-        <rename/>
       </field>
       <field>
         <name>Screen Porch</name>
-        <rename/>
       </field>
       <field>
         <name>Pool Area</name>
-        <rename/>
       </field>
       <field>
         <name>Pool QC</name>
-        <rename/>
       </field>
       <field>
         <name>fence</name>
@@ -4391,27 +4255,21 @@
       </field>
       <field>
         <name>Misc Feature</name>
-        <rename/>
       </field>
       <field>
         <name>Misc Val</name>
-        <rename/>
       </field>
       <field>
         <name>Mo Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Yr Sold</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Type</name>
-        <rename/>
       </field>
       <field>
         <name>Sale Condition</name>
-        <rename/>
       </field>
       <field>
         <name>saleprice</name>
@@ -4788,6 +4646,14 @@
     <compress_variable/>
     <unique_rows>N</unique_rows>
     <fields>
+      <field>
+        <name>pid</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -6186,7 +6052,7 @@ ORDER BY a.pid</sql>
     </partitioning>
     <use_connection_string>Y</use_connection_string>
     <use_legacy_options>N</use_legacy_options>
-    <connection_string>Encrypted 6d6f6e676f64622b7372763a2f2f696e66726174693a696e667261746940636c7573746572302e763572696835622e6d6f6e676f64622e6e65742f3f726574727957726974657183ecddbd0f8185d9a618a47fcc9bbbc3</connection_string>
+    <connection_string>mongodb+srv://infrati:infrati@cluster0.v5rih5b.mongodb.net/?retryWrites=true&amp;w=majority</connection_string>
     <hostname>localhost</hostname>
     <port>27017</port>
     <use_all_replica_members>N</use_all_replica_members>
@@ -6431,7 +6297,7 @@ ORDER BY f.pid</sql>
     </partitioning>
     <use_connection_string>Y</use_connection_string>
     <use_legacy_options>N</use_legacy_options>
-    <connection_string>Encrypted 6d6f6e676f64622b7372763a2f2f696e66726174693a696e667261746940636c7573746572302e763572696835622e6d6f6e676f64622e6e65742f3f726574727957726974657183ecddbd0f8185d9a618a47fcc9bbbc3</connection_string>
+    <connection_string>mongodb+srv://infrati:infrati@cluster0.v5rih5b.mongodb.net/?retryWrites=true&amp;w=majority</connection_string>
     <hostname>localhost</hostname>
     <port>27017</port>
     <use_all_replica_members>N</use_all_replica_members>
@@ -6522,7 +6388,7 @@ ORDER BY f.pid</sql>
     </partitioning>
     <use_connection_string>Y</use_connection_string>
     <use_legacy_options>N</use_legacy_options>
-    <connection_string>Encrypted 6d6f6e676f64622b7372763a2f2f696e66726174693a696e667261746940636c7573746572302e763572696835622e6d6f6e676f64622e6e65742f3f726574727957726974657183ecddbd0f8185d9a618a47fcc9bbbc3</connection_string>
+    <connection_string>mongodb+srv://infrati:infrati@cluster0.v5rih5b.mongodb.net/?retryWrites=true&amp;w=majority</connection_string>
     <hostname>localhost</hostname>
     <port>27017</port>
     <use_all_replica_members>N</use_all_replica_members>
@@ -6588,7 +6454,7 @@ ORDER BY f.pid</sql>
     </partitioning>
     <use_connection_string>Y</use_connection_string>
     <use_legacy_options>N</use_legacy_options>
-    <connection_string>Encrypted 6d6f6e676f64622b7372763a2f2f696e66726174693a696e667261746940636c7573746572302e763572696835622e6d6f6e676f64622e6e65742f3f726574727957726974657183ecddbd0f8185d9a618a47fcc9bbbc3</connection_string>
+    <connection_string>mongodb+srv://infrati:infrati@cluster0.v5rih5b.mongodb.net/?retryWrites=true&amp;w=majority</connection_string>
     <hostname>localhost</hostname>
     <port>27017</port>
     <use_all_replica_members>N</use_all_replica_members>
