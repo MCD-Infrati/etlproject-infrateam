@@ -348,3 +348,8 @@ Un reporte de la experimentación que incluya:
 
 ![No se pudo cargar la imagen 31-archivo_salida.png](images/31-archivo_salida.png)
 <br><br><br>
+
+
+**36. Imagen completa del PDI**
+![No se pudo cargar la imagen imagen_PDI_Final.png](images/imagen_PDI_Final.png)
+<br><br><br>
